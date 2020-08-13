@@ -30,7 +30,7 @@ AUTHOR WEBSITE: https://themefisher.com
   {{ "<!--Favicon-->" | safeHTML }}
   <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
   <link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
-
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
   {{ with .Params.Image }}
   <meta property="og:image" content="{{ . | absURL }}" />
   {{ end }}
