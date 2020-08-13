@@ -1,0 +1,60 @@
+baseURL = "/" 
+title = "My Bucketlist by Htet"
+theme = "persian-hugo-master"
+languageName = "En"
+languageCode = "en-us"
+# post pagination
+paginate = "5"
+
+############################# output ##############################
+[outputs]
+home = [ "HTML", "RSS", "json"]
+
+# render unsafe html
+[markup.goldmark.renderer]
+unsafe = true
+
+############################# Plugins ##############################
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/themify-icons/themify-icons.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+link = "plugins/search/mark.js"
+[[params.plugins.js]]
+link = "plugins/search/search.js"
+
+
+################################ menu ##################################
+[[menu.main]]
+name = "Home"
+URL = "/"
+weight = 1
+
+[[menu.main]]
+name = "About"
+URL = "about"
+weight = 2
+
+
+[[menu.main]]
+name = "Contact"
+URL = "contact"
+weight = 4
+
+
+[params]
+logo = "bkl.png"
+author = "Htet"
+description = "My Bucket List ရဲ့ ခရီးသွားမာတိကာ!!ဒီထဲမှာ ထက်သွားခဲ့သမျှ ခရီးသွားမှတ်တမ်းလေးတွေအကုန်ပေါင်းပေးထားပါတယ်။ခရီးတို ခရီးရှည် နဲ​့ သိသင့်တဲ့ ခရီးဆောင်းပါးလေးတွေကို ပြည့်စုံစွာ သေချာရေးထားပေးပါတယ်နော်!အားလုံးပဲ ခရီးတွေသွားပြီးပျော်ရွှင်ကြပါစေ!! "
+images = ["bkl.jpg"]
+search = true
