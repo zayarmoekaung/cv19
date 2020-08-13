@@ -4,10 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 
 .header {
   text-align: center;
@@ -33,7 +30,6 @@ body {
 }
 
 .column img {
-  margin-top: 8px;
   vertical-align: middle;
   width: 100%;
 }
@@ -47,21 +43,10 @@ h1 {
    position: absolute;
       
 }
- .disbg{
-  /* The image used */
-  
-
-  /* Full height */
-  height: 50%;
-  flex-wrap: 50%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+ 
 .container {
   margin-top: 10px;
+  padding: 0;
   position: relative;
   color: white;
 
@@ -72,17 +57,49 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
    -webkit-text-stroke: 0.1px black;
+  font-size: 15pt; 
 }
-.gimg{
-  width: 100%;
-}
+
+
 .imgblur{
-  position: absolute; 
+  position: absolute;
+  padding: 0; 
   background-color: #2e2e2e; 
+  left: 0;
   width: 100%; 
   height: 100%;
   opacity: 0.5;
 }
+@media (max-width:480px){
+.gimg{
+  width: 100%;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   -webkit-text-stroke: 0.1px black;
+  font-size: 15pt; 
+}
+
+  }
+
+@media (min-width:481px){
+.gimg{
+  height: 50%;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   -webkit-text-stroke: 0.1px black;
+  font-size: 30pt; 
+}
+
+  }
+
 </style>
 
 
@@ -90,16 +107,19 @@ h1 {
 <!-- Photo Grid -->
 <div class="row1" > 
   <div class="column">
-      <div class="container disbg" style="background-image: url(/Shan.jpg);">
+      <div class="container">
         <div class="imgblur"></div>
+         <img class="gimg" src="/Shan.jpg">
         <div class=" centered">ရှမ်းပြည်နယ်</div> 
       </div>
-      <div class="container disbg" style="background-image: url(/pyinoolwin.jpg);">
+      <div class="container">
         <div class="imgblur"></div>
+         <img class="gimg" src="/pyinoolwin.jpg">
         <div class="centered">ပြင်ဦးလွင်</div> 
       </div>
-      <div class="container disbg" style="background-image: url(/tangoo.jpg);">
+      <div class="container">
       <div class="imgblur"></div>
+         <img class="gimg" src="/tangoo.jpg">
         <div class="centered">တောင်ငူ</div> 
       </div>
   </div>
@@ -107,18 +127,18 @@ h1 {
  
   <div class="column">
      <div class="container">
-        
-        <img class="gimg" src="/ygn.jpg">
+      <div class="imgblur"></div>
+       <img class="gimg" src="/ygn.jpg">
         <div class="centered">ရန်ကုန်</div> 
       </div>
-       <div class="container">
-        
-        <img class="gimg" src="/bagan.jpg">
+        <div class="container disbg">
+      <div class="imgblur"></div>
+       <img class="gimg" src="/bagan.jpg">
         <div class="centered">ပုဂံ</div> 
       </div>
-       <div class="container">
-        
-        <img class="gimg" src="/chaungthar.jpg">
+        <div class="container disbg">
+      <div class="imgblur"></div>
+         <img class="gimg" src="/chaungthar.jpg">
         <div class="centered">ချောင်းသာ</div> 
       </div>
 
