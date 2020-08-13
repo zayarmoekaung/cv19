@@ -1,7 +1,6 @@
 ---
-title: "John Doe"
+title: "Htet"
 image: ""
-email: "johndoe@parsian.com"
 social:
   - icon : "ti-facebook" # themify icon pack : https://themify.me/themify-icons
     link : "#"
