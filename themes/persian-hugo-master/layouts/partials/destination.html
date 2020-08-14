@@ -29,10 +29,7 @@
   padding: 0 4px;
 }
 
-.column img {
-  vertical-align: middle;
-  width: 100%;
-}
+
 h1 {
   text-align: center;
   text-transform: uppercase;
@@ -75,6 +72,7 @@ h1 {
 }
 @media (max-width:480px){
 .gimg{
+   vertical-align: middle;
   width: 100%;
   border-radius: 10px;
 }
@@ -91,7 +89,8 @@ h1 {
 
 @media (min-width:481px){
 .gimg{
-  height: 50%;
+   vertical-align: middle;
+  width: 100%;
   border-radius: 10px;
 }
 .centered {
@@ -112,61 +111,32 @@ h1 {
 <!-- Photo Grid -->
 <div class="row1" > 
   <div class="column">
+        
+       {{ range first 2 (where  .Data.Pages "Type" "destination") }}
+        <div class="container">
+        <div class="imgblur"></div>
+         <img class="gimg" src="{{ .Params.Image | absURL }}">
+        <div class=" centered">{{ .Title }}</div> 
+      </div>
+
+      {{end}}
       <div class="container">
         <div class="imgblur"></div>
-         <img class="gimg" src="/Shan.jpg">
-        <div class=" centered">ရှမ်းပြည်နယ်</div> 
+         <img class="gimg" src="/travel.jpg">
+        <div class=" centered">See All Destinations</div> 
       </div>
-      <div class="container">
+</div>
+<div class="column">
+  {{ range first 2 (after 2   (  where .Data.Pages "Type" "destination")) }}
+        <div class="container">
         <div class="imgblur"></div>
-         <img class="gimg" src="/pyinoolwin.jpg">
-        <div class="centered">ပြင်ဦးလွင်</div> 
+         <img class="gimg" src="{{ .Params.Image | absURL }}">
+        <div class=" centered">{{ .Title }}</div> 
       </div>
-      <div class="container">
-      <div class="imgblur"></div>
-         <img class="gimg" src="/tangoo.jpg">
-        <div class="centered">တောင်ငူ</div> 
-      </div>
-       <div class="container disbg">
-      <div class="imgblur"></div>
-         <img class="gimg" src="/vietnam.jpg">
-        <div class="centered">Vietnam</div> 
-      </div>
-      <div class="container disbg">
-      <div class="imgblur"></div>
-         <img class="gimg" src="/korea.jpg">
-        <div class="centered">Korea</div> 
-      </div>
-  </div>
- 
- 
-  <div class="column">
-     <div class="container">
-      <div class="imgblur"></div>
-       <img class="gimg" src="/ygn.jpg">
-        <div class="centered">ရန်ကုန်</div> 
-      </div>
-        <div class="container disbg">
-      <div class="imgblur"></div>
-       <img class="gimg" src="/bagan.jpg">
-        <div class="centered">ပုဂံ</div> 
-      </div>
-        <div class="container disbg">
-      <div class="imgblur"></div>
-         <img class="gimg" src="/chaungthar.jpg">
-        <div class="centered">ချောင်းသာ</div> 
-      </div>
-       <div class="container">
-      <div class="imgblur"></div>
-       <img class="gimg" src="/singapore.jpg">
-        <div class="centered">Singapore</div> 
-      </div>
-        <div class="container disbg">
-      <div class="imgblur"></div>
-       <img class="gimg" src="/thailand.jpg">
-        <div class="centered">ThaiLand</div> 
-      </div>
-  </div>
+
+      {{end}}
+</div>  
+     
 
   
   

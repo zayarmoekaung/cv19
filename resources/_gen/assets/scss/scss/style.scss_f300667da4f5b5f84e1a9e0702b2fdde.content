@@ -17,11 +17,11 @@ body {
   font-family: "Playfair Display", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
-  color: #555; }
+  color: #000000; }
 
 p, .paragraph {
   font-weight: 400;
-  color: #555;
+  color: #000000;
   font-size: 16px;
   line-height: 1.7;
   font-family: "Playfair Display", sans-serif; }
@@ -75,7 +75,7 @@ h6, .h6 {
 
 .btn-outline-primary {
   background: transparent;
-  color: #555;
+  color: #000000;
   border-color: #222; }
   .btn-outline-primary:active, .btn-outline-primary:hover, .btn-outline-primary.focus, .btn-outline-primary.active {
     background: #222 !important;
@@ -85,7 +85,7 @@ h6, .h6 {
 .btn-link {
   background-color: transparent;
   border: 0;
-  color: #555;
+  color: #000000;
   padding: 0; }
   .btn-link i {
     margin-left: 10px;
@@ -231,7 +231,7 @@ a:hover {
     .form-group .form-control::placeholder {
       font-size: 15px;
       opacity: 1;
-      color: #555; }
+      color: #000000; }
 
 textarea.form-control {
   height: 150px !important;
@@ -266,12 +266,14 @@ mark {
   padding: 10px 0;
   margin: 0;
   border-radius: 0;
-  border-color: #eee;
+  border-color: #fff;
+  background-color: #fff;
   text-align: center; }
   .navbar-expand-md .navbar-nav .dropdown-menu .dropdown-item {
-    color: #555;
+    color: #000000;
     font-size: 14px;
-    padding: 7px 22px; }
+    padding: 7px 22px;
+    background-color: #fff; }
     .navbar-expand-md .navbar-nav .dropdown-menu .dropdown-item:hover {
       color: #222; }
 
@@ -428,7 +430,7 @@ mark {
     padding: 0;
     margin-right: 10px;
     border: 0;
-    color: #555; }
+    color: #000000; }
     .pagination .page-item .page-link:hover {
       background: #222;
       color: #fff; }
@@ -459,7 +461,7 @@ mark {
   font-weight: 600; }
 
 .content a {
-  color: #555;
+  color: #000000;
   border-bottom: 1px dotted #eee; }
   .content a:hover {
     color: #222; }
@@ -580,7 +582,7 @@ mark {
 
 .content blockquote {
   font-size: 20px !important;
-  color: #555;
+  color: #000000;
   padding: 20px 40px;
   border-left: 2px solid #222;
   margin: 40px 0;
