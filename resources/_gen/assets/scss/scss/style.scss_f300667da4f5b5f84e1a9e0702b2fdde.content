@@ -107,7 +107,7 @@ body {
   transition: .2s ease; }
 
 ::selection {
-  background: #3c3b3b;
+  background: #3c3c3c;
   color: #fff; }
 
 /* preloader */
@@ -396,7 +396,6 @@ mark {
     @media (max-width: 575px) {
       .post-sm .post-title {
         font-size: 1.2rem; } }
-
 .author-img {
   height: 100px;
   width: 100px;

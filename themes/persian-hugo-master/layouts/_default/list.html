@@ -11,7 +11,7 @@
 <section class="section pt-0">
   <div class="container-fluid">
     <div class="row">
-      {{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
+      {{ $paginator := .Paginate .Data.Pages }}
       {{ range $index,$elements:= $paginator.Pages }}
       {{ if eq $index 0}}
       <div class="col-12 mb-4">

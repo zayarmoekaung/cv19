@@ -113,7 +113,7 @@ h1 {
   <div class="column">
         
        {{ range first 2 (where  .Data.Pages "Type" "destination") }}
-        <div class="container">
+        <div class="container" onclick="location.herf={{ .Permalink }}">
         <div class="imgblur"></div>
          <img class="gimg" src="{{ .Params.Image | absURL }}">
         <div class=" centered">{{ .Title }}</div> 
@@ -128,7 +128,7 @@ h1 {
 </div>
 <div class="column">
   {{ range first 2 (after 2   (  where .Data.Pages "Type" "destination")) }}
-        <div class="container">
+        <div class="container" onclick="location.herf={{ .Permalink }}">
         <div class="imgblur"></div>
          <img class="gimg" src="{{ .Params.Image | absURL }}">
         <div class=" centered">{{ .Title }}</div> 
