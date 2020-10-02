@@ -83,6 +83,13 @@ h2 a {
 }
 
 .container td:first-child { color: #FB667A; }
+.container td:nth-child(2) { color: #FF8C00; }
+.container td:nth-child(3) { color: #FF8C00; }
+.container td:nth-child(4) { color: #FF0000; }
+.container td:nth-child(5) { color: #FF0000; }
+.container td:nth-child(6) { color: #32CD32; }
+.container td:nth-child(7) { color: #32CD32; }
+
 
 .container tr:hover {
    background-color: #464A52;
@@ -203,11 +210,11 @@ function show(data) {
 	for (let r of data.Countries) { 
 		tab += `<tr> 
 	<td>${r.Country} </td> 
-	<td>${r.NewConfirmed}</td> 
+	<td> + ${r.NewConfirmed}</td> 
 	<td>${r.TotalConfirmed}</td> 
-	<td>${r.NewDeaths}</td>
+	<td> + ${r.NewDeaths}</td>
 	<td>${r.TotalDeaths}</td>
-	<td>${r.NewRecovered}</td>		 
+	<td> + ${r.NewRecovered}</td>		 
 	<td>${r.TotalRecovered}</td>
 	<td>${r.Date}</td>
 </tr>`; 
