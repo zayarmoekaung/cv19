@@ -1,3 +1,4 @@
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <style type="text/css">
 	@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
@@ -104,15 +105,12 @@ h2 a {
   transition-timing-function: line;
 }
 
-@media (max-width: 800px) {
-.container td:nth-child(4),
-.container th:nth-child(4) { display: none; }
-}
+
 .warclock{
 	display: block;
-	width: 80%;
-	height: 200px;
-	box-shadow: 5px 10px;
+	width: 100%;
+	height: 400px;
+	
 	padding: 10px;
 	background-color: #ffffff00;
 	margin-left: auto;
@@ -125,28 +123,40 @@ h2 a {
 		text-align: right;
 		float: left;
 		margin-top: 60px;
-		margin-left: 30px;
+		margin-bottom: 10px;
+		margin-left: 10px;
+		line-height: 20px;
 		
+}
+.icn{
+	width: 40px;
+	height: auto;
+}
+.tbl{
+	width: 100%;
+	position: relative;
+	overflow: scroll;
 }
 </style>
 	
 
-	<body> 
+
 		<!-- Here a loader is created which 
 			loads till response comes -->
-		<div class="d-flex justify-content-center"> 
-			<div class="spinner-border"
-				role="status" id="loading"> 
-				<span class="sr-only">Loading...</span> 
-			</div> 
-		</div> 
+		
+			
+	
 		<h1>World Covid Counter</h1> 
 		<!-- table for showing data -->
-		<div class="warclock">
-		<label id="g-total" style="font-size: 60px; color: #FF8C00" class="lab"></label><label id="g-death" style="font-size: 40px; color: #FF0000"  class="lab"></label><label id="g-rcv"style="font-size: 40px; color: #32CD32" class="lab"></label>
+		<div class="warclock ">
+		<h4 style="font-size: 60px;">Global</h4>	
+		<label id="g-total" style="font-size:6vw; color: #FF8C00" class="lab"></label>
+		<label id="g-death" style="font-size:4vw; color: #FF0000"  class="lab"></label>
+		<label id="g-rcv"style="font-size:4vw; color: #32CD32" class="lab"></label>
 		</div>
+		<div class="tbl"> 
 		<table id="employees" class="container"></table> 
-	</body> 
+		</div>
 
 
 <script type="text/javascript">
@@ -164,7 +174,7 @@ async function getapi(url) {
 	var data = await response.json(); 
 	console.log(data); 
 	if (response) { 
-		hideloader(); 
+		 
 	} 
 	show(data); 
 } 
@@ -203,9 +213,9 @@ function show(data) {
 </tr>`; 
 	} 
 	var g = data.Global;
-	var total = g.TotalConfirmed;
-	var death = g.TotalDeaths;
-	var rcv = g.TotalRecovered;
+	var total = 'Total Case : ' + g.TotalConfirmed;
+	var death ='Total Death : ' + g.TotalDeaths;
+	var rcv = 'Total Recovered : ' +g.TotalRecovered;
 	// Setting innerHTML as tab variable 
 	document.getElementById("employees").innerHTML = tab; 
 	document.getElementById("g-total").innerHTML = total;
