@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 {{- partial "head.html" . -}}
+  <style type="text/css">
+       .bg {
+  /* The image used */
+  background-image: url("worldmap.jpg");
 
-<body>
-	{{- partial "preloader.html" . -}}
-	{{- partial "header.html" . -}}
-	{{- block "main" . }}{{- end }}
-	{{- partial "footer.html" . -}}
-</body>
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+   </style>
+<div class="bg">
+
+	{{- partial "covidapi.html" . -}}
+	
+</div>
 
 </html>

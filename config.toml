@@ -1,5 +1,5 @@
 baseURL = "/" 
-title = "My Bucketlist by Htet"
+title = "Covid-19 World Counter"
 theme = "persian-hugo-master"
 languageName = "En"
 languageCode = "en-us"
